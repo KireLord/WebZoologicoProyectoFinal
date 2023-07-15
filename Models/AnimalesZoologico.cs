@@ -10,14 +10,10 @@
 
         // Otros campos relacionados con los animales del zoológico
 
-        // Constructor por defecto
-        public AnimalesZoologico()
-        {
-        }
-
         // Constructor con parámetros para facilitar la creación de instancias
-        public AnimalesZoologico(string nombre, string especie, string descripcion, string fotoPath)
+        public AnimalesZoologico(int id, string nombre, string especie, string descripcion, string fotoPath)
         {
+            Id = id;
             Nombre = nombre;
             Especie = especie;
             Descripcion = descripcion;

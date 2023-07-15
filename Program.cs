@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using WebZoologico.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<WebZoologicoContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WebZoologicoContext") ?? throw new InvalidOperationException("Connection string 'WebZoologicoContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
